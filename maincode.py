@@ -92,11 +92,11 @@ def wishMe():
     day = cal_day()
 
     if(hour>=0) and (hour<=12) and ('AM' in t):
-        speak(f"Good morning Gagana, it's {day} and the time is {t}")
+        speak(f"Good morning Sathvika, it's {day} and the time is {t}")
     elif(hour>=12) and (hour<=16) and ('PM' in t):
-        speak(f"Good afternoon Gagana, it's {day} and the time is {t}")
+        speak(f"Good afternoon Sathvika, it's {day} and the time is {t}")
     else:
-        speak(f"Good evening Gagana, it's {day} and the time is {t}")
+        speak(f"Good evening Sathvika, it's {day} and the time is {t}")
 
 def social_media(command):
     if 'facebook' in command:
@@ -116,15 +116,15 @@ def social_media(command):
 
 def schedule():
     day = cal_day().lower()  
-    speak("Hey Gagana, today's schedule is")
+    speak("Hey Sathvika, today's schedule is")
     week = {
-        "monday": "Gagana from 8:30 am to 9:30 am you have advanced iot class, from 9:30 am to 10:20 am you have cloud computing class, from 10:20 am to 10:40 am you have short break, from 10:40 am to 11:30 am you have indian knowledge system class, from 11:30 am to 12:30 pm you have lunch break, from 12:30 to 2:30 you have advanced iot lab",
-        "tuesday": "Gagana from 8:30 am to 10:20 am you have information and network security lab, from 10:20 am to 10:40 am you have short break, from 10:40 to 11:30 you have Sustainable solar energy technology and job opportunity class, from 12:30 pm to 1:20 pm you have lunch break, from 1:20 to 3:20 you have bizotic training, from 3:20 to 4:30 you have information and network security class",
-        "wednesday": "Gagana from 8:30 am to 9:25 am you have information and network security class, from 9:30 am to 10:20 am you have cloud computing class, from 10:20 am to 10:40 am you have short break, from 10:40 am to 12:30 pm you have natural language processing class, from 12:30 pm to 1:20 pm you have lunch break, from 1:20 to 3:20 you have bizotic training, from 3:20 pm to 4:30 pm you have advanced iot class",
-        "thursday": "Gagana from 8:30 am to 10:20 am you have computer vision and application class, from 10:20 am to 10:40 am you have short break, from 10:40 am to 12:30 pm you have Sustainable solar energy technology and job opportunity class, from 12:30 pm to 1:20 pm you have lunch break, from 1:20 pm to 2:20 pm you have advanced iot class",
-        "friday": "Gagana from 8:30 am to 9:25 am you have cloud computing class, from 9:30 am to 10:20 am you have information and network security class, from 10:20 am to 10:40 am you have short break, from 10:40 am to 12:30 pm you have cloud computing lab, from 12:30 pm to 1:20 pm you have lunch break, from 1:20 pm to 2:20 pm you have computer vision and application class, from 2:20 pm to 3:20 pm you have natural language processing class",
-        "saturday": "Gagana it is your free day but still it is better to work on projects or update your resume or work on github repository",
-        "sunday": "Gagana it's a chill day just have fun and enjoy with your family",
+        "monday": "Sathvika from 8:30 am to 9:30 am you have advanced iot class, from 9:30 am to 10:20 am you have cloud computing class, from 10:20 am to 10:40 am you have short break, from 10:40 am to 11:30 am you have indian knowledge system class, from 11:30 am to 12:30 pm you have lunch break, from 12:30 to 2:30 you have advanced iot lab",
+        "tuesday": "Sathvika from 8:30 am to 10:20 am you have information and network security lab, from 10:20 am to 10:40 am you have short break, from 10:40 to 11:30 you have Sustainable solar energy technology and job opportunity class, from 12:30 pm to 1:20 pm you have lunch break, from 1:20 to 3:20 you have bizotic training, from 3:20 to 4:30 you have information and network security class",
+        "wednesday": "Sathvika from 8:30 am to 9:25 am you have information and network security class, from 9:30 am to 10:20 am you have cloud computing class, from 10:20 am to 10:40 am you have short break, from 10:40 am to 12:30 pm you have natural language processing class, from 12:30 pm to 1:20 pm you have lunch break, from 1:20 to 3:20 you have bizotic training, from 3:20 pm to 4:30 pm you have advanced iot class",
+        "thursday": "Sathvika from 8:30 am to 10:20 am you have computer vision and application class, from 10:20 am to 10:40 am you have short break, from 10:40 am to 12:30 pm you have Sustainable solar energy technology and job opportunity class, from 12:30 pm to 1:20 pm you have lunch break, from 1:20 pm to 2:20 pm you have advanced iot class",
+        "friday": "Sathvika from 8:30 am to 9:25 am you have cloud computing class, from 9:30 am to 10:20 am you have information and network security class, from 10:20 am to 10:40 am you have short break, from 10:40 am to 12:30 pm you have cloud computing lab, from 12:30 pm to 1:20 pm you have lunch break, from 1:20 pm to 2:20 pm you have computer vision and application class, from 2:20 pm to 3:20 pm you have natural language processing class",
+        "saturday": "Sathvika it is your free day but still it is better to work on projects or update your resume or work on github repository",
+        "sunday": "Sathvika it's a chill day just have fun and enjoy with your family",
     }
     if day in week.keys():
         speak(week[day])
@@ -155,7 +155,7 @@ def closeApp(command):
 
 def browsing(query):
     if 'google' in query:
-        speak("Gagana, what should i search on google")
+        speak("Sathvika, what should i search on google")
         s = command().lower()
         webbrowser.open(f"{s}")
     # elif 'edge' in query:
@@ -206,7 +206,7 @@ def set_reminder(query=None):
     
 def play_music(query):
     if 'play music' in query:
-        speak("Gagana, which song should I play?")
+        speak("Sathvika, which song should I play?")
         song = command().lower()
         webbrowser.open(f"https://www.youtube.com/results?search_query={song}")
 
@@ -231,14 +231,14 @@ def condition():
     speak(f"CPU is at {usage} percentage")
     battery = psutil.sensors_battery()
     percentage = battery.percent
-    speak(f"Gagana our system have {percentage} percentage battery")
+    speak(f"Sathvika our system have {percentage} percentage battery")
 
     if percentage>=80:
-        speak("Gagana we have sufficient battery to continue to work on the project")
+        speak("Sathvika we have sufficient battery to continue to work on the project")
     elif percentage>=40 and percentage<=75:
-        speak("Gagana please start charging the system")
+        speak("Sathvika please start charging the system")
     else:
-        speak("Gagana there is very low battery charge the system as soon as possible")    
+        speak("Sathvika there is very low battery charge the system as soon as possible")    
 
 if __name__ == "__main__":
     speak("Hello I am Saanvi, your AI assistant")
